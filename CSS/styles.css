@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --main-color: #45b1a3;
+    --secondary-color: #f4f4f4;
+    --accent-color: #14b995;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+nav ul li:hover {
+    background: var(--accent-color);
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.introduccion, .lista {
+    background: var(--text-color);
+    padding: 20px;
+    border-radius: 5px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lista ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.lista li {
+    background: var(--accent-color);
+    color: var(--text-color);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .introduccion, .lista {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
